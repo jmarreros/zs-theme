@@ -1,0 +1,21 @@
+/*!
+Theme Name: zs
+Theme URI: http://zonasalsera.com/
+Author: Jhon Marreros Guzmán
+Author URI: https://decodecms.com/
+Description: Tema para Academia Zona Salsera Trujillo
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: zs
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+
+@import './partials/normalize';
+@import './partials/general';
+@import './partials/typography';
+@import './partials/forms';
+@import './partials/navigation';
+@import './partials/widgets';
+@import './partials/media';
+@import './partials/mediaquery';

@@ -1,0 +1,23 @@
+{
+  "name": "zs",
+  "version": "1.0.0",
+  "description": "[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --info-verbosity verbose",
+    "watch": "webpack --watch --info-verbosity verbose"
+  },
+  "keywords": [],
+  "author": "Jhon Marreros Guzmán",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^0.28.11",
+    "mini-css-extract-plugin": "^0.4.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.8"
+  }
+}
