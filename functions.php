@@ -44,7 +44,7 @@ if ( ! function_exists( 'zs_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'zs' ),
+			'principal-menu' => esc_html__( 'Primary Menu', 'zs' ),
 		) );
 
 		/*
@@ -98,39 +98,7 @@ function zs_content_width() {
 }
 add_action( 'after_setup_theme', 'zs_content_width', 0 );
 
-/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-function zs_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'zs' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'zs' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-}
-add_action( 'widgets_init', 'zs_widgets_init' );
 
-/**
- * Enqueue scripts and styles.
- */
-function zs_scripts() {
-	wp_enqueue_style( 'zs-style', get_stylesheet_uri() );
-
-	wp_enqueue_script( 'zs-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'zs-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'zs_scripts' );
 
 /**
  * Implement the Custom Header feature.
@@ -153,13 +121,84 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/customizer.php';
 
 
-// Import Google Fonts
-add_action("wp_enqueue_scripts", "zs_insertar_google_fonts");
+/**
+ * Register widget area.
+ *
+ * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+ */
+function zs_widgets_init() {
+	register_sidebar( array(
+		'name'          => esc_html__( 'Sidebar', 'zs' ),
+		'id'            => 'sidebar-1',
+		'description'   => esc_html__( 'Add widgets here.', 'zs' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'zs_widgets_init' );
 
-function zs_insertar_google_fonts(){
-    $url = "https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|PT+Sans+Narrow:400,700";
-    wp_enqueue_style('google_fonts', $url);
- }
+/**
+ * Enqueue scripts and styles.
+ */
+
+ //Jquery desregistro
+add_action('wp_enqueue_scripts', 'jquery_script_remove_header');
+function jquery_script_remove_header() {
+      wp_deregister_script( 'jquery' );
+}
+
+//Register scripts and sytles
+function zs_scripts() {
+
+	// Import Styles
+	wp_enqueue_style('google_fonts', "https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|PT+Sans+Narrow:400,700", array(), wp_get_theme()->get('Version') );
+	wp_enqueue_style( 'zs-style', get_stylesheet_uri(),  array(), wp_get_theme()->get('Version') );
+
+	// Import jquery
+	wp_enqueue_script( 'jquery', "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js",false, '3.3.1', true);
+	wp_enqueue_script( 'zs-script', get_template_directory_uri() . '/js/script.js', array('jquery'), wp_get_theme()->get('Version'), true );
+	wp_enqueue_script( 'zs-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), wp_get_theme()->get('Version'), true );
+
+	// if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+	// 	wp_enqueue_script( 'comment-reply' );
+	// }
+
+}
+add_action( 'wp_enqueue_scripts', 'zs_scripts' );
+
+
+// Register styles footer
+function zs_styles_footer() {
+	wp_enqueue_style('fontawesome', "https://use.fontawesome.com/releases/v5.1.0/css/all.css", array(), '5.1.0');
+	wp_enqueue_style('bulma', "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css", array('fontawesome'), '0.7.1');
+};
+add_action( 'get_footer', 'zs_styles_footer' );
+
+
+
+//Search in menu
+
+add_filter( 'wp_nav_menu_items', 'zs_item_search', 10, 2);
+
+function zs_item_search( $items, $args ) {
+
+	if ($args->theme_location == 'principal-menu') {
+
+		$items .= '<li class="menu-item item-search">'
+				. '<form role="search" method="get" class="search-form" action="'.home_url( '/' ).'">'
+				. '<label>'
+				. '<span class="screen-reader-text">' . _x( 'Buscar:', 'label' ) . '</span>'
+				. '<input type="search" class="search-field" placeholder="' . esc_attr_x( 'Buscar …', 'placeholder' ) . '" value="' . get_search_query() . '" name="s" title="' . esc_attr_x( 'Search for:', 'label' ) . '" />'
+				. '</label>'
+				. '<input type="submit" class="search-submit" value="" />'
+				. '</form>'
+				. '</li>';
+	}
+
+	return $items;
+}
 
 
 

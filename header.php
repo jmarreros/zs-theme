@@ -27,8 +27,8 @@
 	<header id="masthead" class="site-header">
 		<div class="container">
 
-			<div class="wrap">
-				<div class="site-branding">
+			<div class="wrap columns">
+				<div class="site-branding column is-one-third">
 					<?php
 					the_custom_logo();
 					if ( is_front_page() && is_home() ) :
@@ -47,14 +47,15 @@
 					<?php endif; ?>
 				</div><!-- .site-branding -->
 
-				<nav id="site-navigation" class="main-navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'zs' ); ?></button>
+				<nav id="site-navigation" class="main-navigation column">
+					<a href="javascript:void(0);" class="icon-menu" onclick="toogle_menu()">&#9776;</a>
 					<?php
 					wp_nav_menu( array(
-						'theme_location' => 'menu-1',
+						'theme_location' => 'principal-menu',
 						'menu_id'        => 'primary-menu',
 					) );
 					?>
+
 				</nav><!-- #site-navigation -->
 			</div>
 

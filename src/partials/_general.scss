@@ -1,19 +1,30 @@
-.container{
-    max-width: 1200px;
-    margin:auto;
-}
-
 // Header
 
 header{
     width:100%;
     background-color:$background-header;
+
+    .wrap{
+        padding:26px 10px;
+    }
+
+    .icon-menu{
+        color:white;
+        font-size:2.2rem;
+        text-decoration: none;
+        display: none;
+    }
 }
 
 .site-branding{
+    // float:left;
+    // width: 30%;
+    text-align: center;
     .site-title{
         display: block;
         text-indent: -9999px;
+        text-align: center;
+        margin:auto;
         
         a{
             background: url($logo);
@@ -21,6 +32,7 @@ header{
             display: block;
             width:250px;
             height:158px;
+            margin:auto;
         }
 
     }
