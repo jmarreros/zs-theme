@@ -1,3 +1,28 @@
-body{
-    
+.container{
+    max-width: 1200px;
+    margin:auto;
 }
+
+// Header
+
+header{
+    width:100%;
+    background-color:$background-header;
+}
+
+.site-branding{
+    .site-title{
+        display: block;
+        text-indent: -9999px;
+        
+        a{
+            background: url($logo);
+            background-size: 250px 158px;
+            display: block;
+            width:250px;
+            height:158px;
+        }
+
+    }
+
+} 

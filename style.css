@@ -457,6 +457,24 @@ table {
 .site-footer:after {
   clear: both; }
 
+.container {
+  max-width: 1200px;
+  margin: auto; }
+
+header {
+  width: 100%;
+  background-color: #0F0705; }
+
+.site-branding .site-title {
+  display: block;
+  text-indent: -9999px; }
+  .site-branding .site-title a {
+    background: url("images/logo.svg");
+    background-size: 250px 158px;
+    display: block;
+    width: 250px;
+    height: 158px; }
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -513,6 +531,13 @@ mark, ins {
 
 big {
   font-size: 125%; }
+
+.site-description {
+  color: #F6DD61;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: .85rem; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -594,24 +619,6 @@ textarea {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-/*--------------------------------------------------------------
-## Links
---------------------------------------------------------------*/
-a {
-  color: royalblue; }
-
-a:visited {
-  color: purple; }
-
-a:hover, a:focus, a:active {
-  color: midnightblue; }
-
-a:focus {
-  outline: thin dotted; }
-
-a:hover, a:active {
-  outline: 0; }
-
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
@@ -699,6 +706,24 @@ a:hover, a:active {
   max-width: 100%; }
 
 /*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a {
+  color: royalblue; }
+
+a:visited {
+  color: purple; }
+
+a:hover, a:focus, a:active {
+  color: midnightblue; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:hover, a:active {
+  outline: 0; }
+
+/*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
 .page-content .wp-smiley,
@@ -775,4 +800,3 @@ object {
 
 .gallery-caption {
   display: block; }
-

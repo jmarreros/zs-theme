@@ -152,10 +152,24 @@ require get_template_directory() . '/inc/template-functions.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 
-/**
- * Load Jetpack compatibility file.
- */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
-}
 
+// Import Google Fonts
+add_action("wp_enqueue_scripts", "zs_insertar_google_fonts");
+
+function zs_insertar_google_fonts(){
+    $url = "https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|PT+Sans+Narrow:400,700";
+    wp_enqueue_style('google_fonts', $url);
+ }
+
+
+
+
+
+
+
+// //SVG support
+// function cc_mime_types($mimes) {
+// 	$mimes['svg'] = 'image/svg+xml';
+// 	return $mimes;
+//   }
+//   add_filter('upload_mimes', 'cc_mime_types');
