@@ -192,7 +192,7 @@ function zs_item_search( $items, $args ) {
 				. '<span class="screen-reader-text">' . _x( 'Buscar:', 'label' ) . '</span>'
 				. '<input type="search" class="search-field" placeholder="' . esc_attr_x( 'Buscar …', 'placeholder' ) . '" value="' . get_search_query() . '" name="s" title="' . esc_attr_x( 'Search for:', 'label' ) . '" />'
 				. '</label>'
-				. '<input type="submit" class="search-submit" value="" />'
+				. '<a href="#" class="search-link hide"><i class="fas fa-search"></i></a>'
 				. '</form>'
 				. '</li>';
 	}

@@ -48,7 +48,7 @@
 				</div><!-- .site-branding -->
 
 				<nav id="site-navigation" class="main-navigation column">
-					<a href="javascript:void(0);" class="icon-menu" onclick="toogle_menu()">&#9776;</a>
+					<a href="#" class="icon-menu" >&#9776;</a>
 					<?php
 					wp_nav_menu( array(
 						'theme_location' => 'principal-menu',

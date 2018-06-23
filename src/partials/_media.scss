@@ -3,15 +3,15 @@
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: black;
 }
 
 a:visited {
-	color: purple;
+	color: black;
 }
 
 a:hover, a:focus, a:active {
-	color: midnightblue;
+	color: $color-red-dark;
 }
 
 a:focus {

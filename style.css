@@ -462,11 +462,8 @@ header {
   background-color: #0F0705; }
   header .wrap {
     padding: 26px 10px; }
-  header .icon-menu {
-    color: white;
-    font-size: 2.2rem;
-    text-decoration: none;
-    display: none; }
+  header a {
+    color: white; }
 
 .site-branding {
   text-align: center; }
@@ -638,23 +635,30 @@ textarea {
   padding: 0; }
   .main-navigation ul li {
     display: inline-block;
-    margin-left: 1.1rem; }
+    margin-left: 1.2rem; }
     .main-navigation ul li a {
       font-family: "Montserrat", sans-serif;
       color: white;
       text-decoration: none;
-      font-size: 1.1rem; }
+      font-size: 1.1rem;
+      padding-bottom: 10px;
+      display: block;
+      transition: border-color 0.6s linear;
+      border-color: black; }
+      .main-navigation ul li a:hover {
+        border-bottom: 6px solid #C52B28; }
+    .main-navigation ul li.current-menu-item a {
+      border-bottom: 6px solid #C52B28; }
+  .main-navigation ul .search-field {
+    max-width: 180px;
+    display: none; }
+  .main-navigation ul .search-link {
+    padding: 5px 10px;
+    display: inline-block;
+    border-bottom: none !important; }
 
-.menu-item .search-form input[type="submit"] {
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  margin: 0;
-  margin-left: 10px;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-size: 18px;
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Feedbin-Icon-home-search.svg/36px-Feedbin-Icon-home-search.svg.png); }
+.icon-menu:hover {
+  color: #C52B28; }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -689,13 +693,13 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue; }
+  color: black; }
 
 a:visited {
-  color: purple; }
+  color: black; }
 
 a:hover, a:focus, a:active {
-  color: midnightblue; }
+  color: #932121; }
 
 a:focus {
   outline: thin dotted; }
@@ -785,9 +789,24 @@ object {
   header .wrap {
     position: relative; }
     header .wrap .icon-menu {
+      color: white;
+      font-size: 2.2rem;
+      text-decoration: none;
+      display: none;
       display: block;
       position: absolute;
       top: 1rem;
       right: 2rem; }
+      header .wrap .icon-menu:hover {
+        color: #C52B28; }
   .main-navigation ul {
-    text-align: center; } }
+    display: none;
+    text-align: center; }
+    .main-navigation ul li {
+      padding: 2px;
+      border-bottom: 1px solid #333333;
+      margin: 0;
+      width: 100%; }
+      .main-navigation ul li a {
+        padding: 6px;
+        border: none !important; } }

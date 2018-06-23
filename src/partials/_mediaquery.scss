@@ -1,34 +1,44 @@
 @media( max-width:980px){
-    // .site-branding{
-    //     width: 30%;
-    // }
-    // .main-navigation{
-    //     width:70%;
-    // }
 }
 
 @media( max-width:768px){
+
+    // Responsive menu
     header .wrap{
         position: relative;
         .icon-menu{
+            color:white;
+            font-size:2.2rem;
+            text-decoration: none;
+            display: none;            
             display: block;
             position: absolute;
             top:1rem;
             right: 2rem;
+            &:hover{
+                color:$color-red-light;
+            }
         }
+
     }
-    // .site-branding,
-    // .main-navigation{
-    //     width:100%;
-    //     float:none;
-    // }
-    .main-navigation ul{
-        text-align: center;
-        // li{
-        //     width:100%;
-        //     margin:0;
-        //     padding:0.5rem;
-        // }
+
+    .main-navigation {
+        ul{
+            display: none;
+            text-align: center;
+            li{
+                padding:2px;
+                border-bottom: 1px solid $color-black-light;
+                margin:0;
+                width: 100%;
+                a{
+                    padding:6px;
+                    border:none!important;
+                }
+            }
+        }
+    
     }
+    
 
 }
