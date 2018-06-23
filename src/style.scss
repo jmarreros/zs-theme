@@ -11,12 +11,11 @@ Text Domain: zs
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 */
 
-@import './partials/normalize';
 @import './partials/variables';
+@import './partials/normalize';
 @import './partials/general';
 @import './partials/typography';
 @import './partials/forms';
 @import './partials/navigation';
 @import './partials/widgets';
-@import './partials/media';
 @import './partials/mediaquery';

@@ -42,8 +42,9 @@
     // toogle icon menu
     $('.icon-menu').click( function ( e ){
         e.preventDefault();
-        $(this).toggleClass('show-responsive');
-        $('.main-navigation ul').animate( { height:'toggle' }, 500);
+
+        $('.main-navigation').toggleClass('show-responsive');
+        
     });
 
 

@@ -48,7 +48,7 @@
 				</div><!-- .site-branding -->
 
 				<nav id="site-navigation" class="main-navigation column">
-					<a href="#" class="icon-menu" >&#9776;</a>
+					<a href="#" class="icon-menu" ><i class="fas fa-bars"></i></a>
 					<?php
 					wp_nav_menu( array(
 						'theme_location' => 'principal-menu',
@@ -59,6 +59,11 @@
 				</nav><!-- #site-navigation -->
 			</div>
 
+			<aside class="header-text columns">
+				<div class="column is-one-third">
+				<?php dynamic_sidebar( 'header-text' ); ?>
+				</div>
+			</aside>
 
 		</div>
 	</header><!-- #masthead -->

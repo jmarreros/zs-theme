@@ -457,13 +457,117 @@ table {
 .site-footer:after {
   clear: both; }
 
-header {
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a {
+  color: black; }
+
+a:visited {
+  color: black; }
+
+a:hover, a:focus, a:active {
+  color: #932121; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:hover, a:active {
+  outline: 0; }
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0; }
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+  max-width: 100%; }
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+  display: inline-block; }
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+  margin-bottom: 1.5em;
+  max-width: 100%; }
+
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.wp-caption .wp-caption-text {
+  margin: 0.8075em 0; }
+
+.wp-caption-text {
+  text-align: center; }
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+  margin-bottom: 1.5em; }
+
+.gallery-item {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%; }
+
+.gallery-columns-2 .gallery-item {
+  max-width: 50%; }
+
+.gallery-columns-3 .gallery-item {
+  max-width: 33.33%; }
+
+.gallery-columns-4 .gallery-item {
+  max-width: 25%; }
+
+.gallery-columns-5 .gallery-item {
+  max-width: 20%; }
+
+.gallery-columns-6 .gallery-item {
+  max-width: 16.66%; }
+
+.gallery-columns-7 .gallery-item {
+  max-width: 14.28%; }
+
+.gallery-columns-8 .gallery-item {
+  max-width: 12.5%; }
+
+.gallery-columns-9 .gallery-item {
+  max-width: 11.11%; }
+
+.gallery-caption {
+  display: block; }
+
+.site-header {
   width: 100%;
   background-color: #0F0705; }
-  header .wrap {
+  .site-header .wrap {
     padding: 26px 10px; }
-  header a {
+  .site-header a {
     color: white; }
+  .site-header .icon-menu {
+    display: none; }
+  .site-header .container {
+    background-image: url("images/img-fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+    min-height: 600px; }
 
 .site-branding {
   text-align: center; }
@@ -479,6 +583,27 @@ header {
       width: 250px;
       height: 158px;
       margin: auto; }
+
+.header-text {
+  color: white; }
+  .header-text .widget {
+    width: 320px;
+    margin: auto; }
+  .header-text h2 {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 1.4rem;
+    text-align: center;
+    text-transform: uppercase;
+    width: 300px;
+    margin: auto; }
+  .header-text ul {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    list-style: square;
+    margin-left: 26px; }
+    .header-text ul li {
+      padding: 4px; }
 
 /*--------------------------------------------------------------
 # Typography
@@ -651,14 +776,12 @@ textarea {
       border-bottom: 6px solid #C52B28; }
   .main-navigation ul .search-field {
     max-width: 180px;
-    display: none; }
+    display: none;
+    padding-left: .5rem; }
   .main-navigation ul .search-link {
     padding: 5px 10px;
     display: inline-block;
     border-bottom: none !important; }
-
-.icon-menu:hover {
-  color: #C52B28; }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -689,116 +812,25 @@ textarea {
 .widget select {
   max-width: 100%; }
 
-/*--------------------------------------------------------------
-## Links
---------------------------------------------------------------*/
-a {
-  color: black; }
-
-a:visited {
-  color: black; }
-
-a:hover, a:focus, a:active {
-  color: #932121; }
-
-a:focus {
-  outline: thin dotted; }
-
-a:hover, a:active {
-  outline: 0; }
-
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
-.page-content .wp-smiley,
-.entry-content .wp-smiley,
-.comment-content .wp-smiley {
-  border: none;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 0; }
-
-/* Make sure embeds and iframes fit their containers. */
-embed,
-iframe,
-object {
-  max-width: 100%; }
-
-/* Make sure logo link wraps around logo image. */
-.custom-logo-link {
-  display: inline-block; }
-
-/*--------------------------------------------------------------
-## Captions
---------------------------------------------------------------*/
-.wp-caption {
-  margin-bottom: 1.5em;
-  max-width: 100%; }
-
-.wp-caption img[class*="wp-image-"] {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
-
-.wp-caption .wp-caption-text {
-  margin: 0.8075em 0; }
-
-.wp-caption-text {
-  text-align: center; }
-
-/*--------------------------------------------------------------
-## Galleries
---------------------------------------------------------------*/
-.gallery {
-  margin-bottom: 1.5em; }
-
-.gallery-item {
-  display: inline-block;
-  text-align: center;
-  vertical-align: top;
-  width: 100%; }
-
-.gallery-columns-2 .gallery-item {
-  max-width: 50%; }
-
-.gallery-columns-3 .gallery-item {
-  max-width: 33.33%; }
-
-.gallery-columns-4 .gallery-item {
-  max-width: 25%; }
-
-.gallery-columns-5 .gallery-item {
-  max-width: 20%; }
-
-.gallery-columns-6 .gallery-item {
-  max-width: 16.66%; }
-
-.gallery-columns-7 .gallery-item {
-  max-width: 14.28%; }
-
-.gallery-columns-8 .gallery-item {
-  max-width: 12.5%; }
-
-.gallery-columns-9 .gallery-item {
-  max-width: 11.11%; }
-
-.gallery-caption {
-  display: block; }
-
 @media (max-width: 768px) {
-  header .wrap {
+  .site-header .wrap {
     position: relative; }
-    header .wrap .icon-menu {
+    .site-header .wrap .icon-menu {
       color: white;
-      font-size: 2.2rem;
+      font-size: 1.8rem;
       text-decoration: none;
       display: none;
       display: block;
       position: absolute;
       top: 1rem;
-      right: 2rem; }
-      header .wrap .icon-menu:hover {
+      right: 2.2rem;
+      padding: 6px; }
+      .site-header .wrap .icon-menu:hover {
         color: #C52B28; }
+  .main-navigation.show-responsive ul {
+    display: block; }
+  .main-navigation.show-responsive .icon-menu {
+    color: #C52B28; }
   .main-navigation ul {
     display: none;
     text-align: center; }
