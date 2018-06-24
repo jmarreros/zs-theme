@@ -1,42 +1,53 @@
-@media( max-width:980px){
-}
-
-
 
 @media( max-width:768px){
 
     // Responsive menu
-    .site-header .wrap{
-        position: relative;
-        .icon-menu{
-            color:white;
-            font-size:1.8rem;
-            text-decoration: none;
-            display: none;            
-            display: block;
-            position: absolute;
-            top:1rem;
-            right: 2.2rem;
-            padding:6px;
-            &:hover{
-                color:$color-red-light;
-            }
+    .site-header {
+        .container{
+            background-position-y: 200px;
+            background-position-x: center;
         }
+        .wrap{
+            position: relative;
+            .icon-menu{
+                color:white;
+                font-size:1.8rem;
+                text-decoration: none;
+                display: none;            
+                display: block;
+                position: absolute;
+                top:1.2rem;
+                right: 3.2rem;
+                padding:6px;
+                &:hover{
+                    color:$color-red-light;
+                }
+            }
+        
+            &.show-responsive {
+                .main-navigation {
+                    ul{
+                        display: block;
+                    }
+                    .icon-menu{
+                        color: $color-red-light;
+                    }
+                }
+                
+              + .header-text{
+                    margin-top:0;
+                }
+            }
 
-    }
+        }    
+
+    } //site header
 
     .main-navigation {
-        &.show-responsive {
-            ul{
-                display: block;
-            }
-            .icon-menu{
-                color: $color-red-light;
-            }
-        }
         ul{
             display: none;
             text-align: center;
+            background-color:rgba(0,0,0,.7);
             li{
                 padding:2px;
                 border-bottom: 1px solid $color-black-light;
@@ -49,7 +60,24 @@
             }
         }
     
-    }
+    } //site navigation
+
+
+    .header-text{
+        background-color:rgba(0,0,0,.7);
+        margin-top:250px;
+        .widget{
+            width:80%;
+        }
+
+    } //header text
     
 
+}
+
+
+@media( min-width:660px) and (max-width:767px){
+    .header-text{
+        margin-top:360px;
+    }
 }

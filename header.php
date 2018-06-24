@@ -59,12 +59,14 @@
 				</nav><!-- #site-navigation -->
 			</div>
 
-			<aside class="header-text columns">
-				<div class="column is-one-third">
-				<?php dynamic_sidebar( 'header-text' ); ?>
-				</div>
-			</aside>
-
+			<?php if ( is_front_page() || is_search() ){ ?>
+				<aside class="header-text">
+					<div class="column is-one-third">
+					<?php dynamic_sidebar( 'header-text' ); ?>
+					</div>
+					</aside>
+			<?php } ?>
+			
 		</div>
 	</header><!-- #masthead -->
 

@@ -42,8 +42,8 @@
     // toogle icon menu
     $('.icon-menu').click( function ( e ){
         e.preventDefault();
-
-        $('.main-navigation').toggleClass('show-responsive');
+        
+        $('.site-header .wrap').toggleClass('show-responsive');
         
     });
 
