@@ -748,6 +748,12 @@ select {
 textarea {
   width: 100%; }
 
+.button {
+  transition: background-color 0.5s; }
+
+.button:hover {
+  background-color: #C52B28 !important; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -806,14 +812,70 @@ textarea {
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
-.widget {
-  margin: 0 0 1.5em;
-  /* Make sure select elements fit in widgets. */ }
+.site-content .widget {
+  padding: 16px;
+  font-size: .9rem; }
+  .site-content .widget .widget-title {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 1.6rem;
+    margin: -16px;
+    margin-bottom: 16px;
+    padding: 8px 16px; }
+  .site-content .widget h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem; }
 
 .widget select {
   max-width: 100%; }
 
+#secondary-home {
+  margin-top: -54px; }
+  #secondary-home .widget:first-child {
+    background-color: #5F5F5F;
+    color: white; }
+    #secondary-home .widget:first-child .widget-title {
+      background-color: #333333;
+      position: relative; }
+      #secondary-home .widget:first-child .widget-title:after {
+        content: "";
+        display: block;
+        top: -3px;
+        right: 16px;
+        position: absolute;
+        background: url("images/badge.svg") no-repeat;
+        width: 28px;
+        height: 54px; }
+    #secondary-home .widget:first-child h3 {
+      background-color: #932121;
+      display: inline-block;
+      padding: 2px 6px;
+      min-width: 86px;
+      text-align: center;
+      font-size: 0.9rem;
+      margin-bottom: 10px; }
+    #secondary-home .widget:first-child .button {
+      float: right; }
+    #secondary-home .widget:first-child table th {
+      color: #F6DD61;
+      font-weight: normal;
+      padding-bottom: 8px; }
+      #secondary-home .widget:first-child table th:first-child {
+        min-width: 128px; }
+    #secondary-home .widget:first-child:after {
+      content: "";
+      display: block;
+      clear: both; }
+
+@media (max-width: 1240px) {
+  .site-content .column.is-one-quarter {
+    width: 30%; }
+  .site-content .container {
+    max-width: 95%;
+    width: 95%; } }
+
 @media (max-width: 768px) {
+  .site-content .column.is-one-quarter {
+    width: 100%; }
   .site-header .container {
     background-position-y: 200px;
     background-position-x: center; }

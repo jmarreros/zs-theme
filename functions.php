@@ -128,6 +128,7 @@ require get_template_directory() . '/inc/customizer.php';
  */
 function zs_widgets_init() {
 
+	//header text
 	register_sidebar( array(
 		'name'          => esc_html__( 'header-text', 'zs' ),
 		'id'            => 'header-text',
@@ -140,14 +141,25 @@ function zs_widgets_init() {
 
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'zs' ),
-		'id'            => 'sidebar-1',
+		'name'          => esc_html__( 'Sidebar Home', 'zs' ),
+		'id'            => 'sidebar-home',
 		'description'   => esc_html__( 'Add widgets here.', 'zs' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Sidebar General', 'zs' ),
+		'id'            => 'sidebar-general',
+		'description'   => esc_html__( 'Add widgets here.', 'zs' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
 }
 add_action( 'widgets_init', 'zs_widgets_init' );
 
@@ -165,7 +177,6 @@ function jquery_script_remove_header() {
 function zs_scripts() {
 
 	// Import Styles
-	wp_enqueue_style('google_fonts', "https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|PT+Sans+Narrow:400,700", array(), wp_get_theme()->get('Version') );
 	wp_enqueue_style( 'zs-style', get_stylesheet_uri(),  array(), wp_get_theme()->get('Version') );
 
 	// Import jquery
@@ -183,6 +194,7 @@ add_action( 'wp_enqueue_scripts', 'zs_scripts' );
 
 // Register styles footer
 function zs_styles_footer() {
+	wp_enqueue_style('google_fonts', "https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|PT+Sans+Narrow:400,700", array(), wp_get_theme()->get('Version') );
 	wp_enqueue_style('fontawesome', "https://use.fontawesome.com/releases/v5.1.0/css/all.css", array(), '5.1.0');
 	wp_enqueue_style('bulma', "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css", array('fontawesome'), '0.7.1');
 };
@@ -191,7 +203,6 @@ add_action( 'get_footer', 'zs_styles_footer' );
 
 
 //Add search in menu
-
 add_filter( 'wp_nav_menu_items', 'zs_item_search', 10, 2);
 
 function zs_item_search( $items, $args ) {

@@ -1,5 +1,24 @@
 
+@media ( max-width: 1240px ){
+    .site-content .column.is-one-quarter{
+        width:30%;
+    }
+    .site-content .container{
+        max-width: 95%;
+        width:95%;
+    }
+}
+
 @media( max-width:768px){
+
+    // .site-content .container{
+    //     max-width: 100%;
+    //     width:100%;
+    // }
+
+    .site-content .column.is-one-quarter{
+        width:100%;
+    }
 
     // Responsive menu
     .site-header {
@@ -13,7 +32,7 @@
                 color:white;
                 font-size:1.8rem;
                 text-decoration: none;
-                display: none;            
+                display: none;
                 display: block;
                 position: absolute;
                 top:1.2rem;
@@ -23,7 +42,7 @@
                     color:$color-red-light;
                 }
             }
-        
+
             &.show-responsive {
                 .main-navigation {
                     ul{
@@ -33,13 +52,13 @@
                         color: $color-red-light;
                     }
                 }
-                
+
               + .header-text{
                     margin-top:0;
                 }
             }
 
-        }    
+        }
 
     } //site header
 
@@ -59,7 +78,7 @@
                 }
             }
         }
-    
+
     } //site navigation
 
 
@@ -71,7 +90,7 @@
         }
 
     } //header text
-    
+
 
 }
 

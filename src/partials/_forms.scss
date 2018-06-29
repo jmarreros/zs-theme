@@ -82,3 +82,11 @@ select {
 textarea {
 	width: 100%;
 }
+
+.button{
+	transition: background-color 0.5s;
+}
+
+.button:hover{
+	background-color:$color-red-light!important;
+}

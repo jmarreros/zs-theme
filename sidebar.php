@@ -6,12 +6,19 @@
  *
  * @package zs
  */
-
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-	return;
-}
 ?>
 
-<aside id="secondary" class="widget-area">
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
-</aside><!-- #secondary -->
+<?php if ( is_active_sidebar( 'sidebar-home' ) && is_home() ) { ?>
+
+<aside id="secondary-home" class="widget-area column is-one-quarter">
+	<?php dynamic_sidebar( 'sidebar-home' ); ?>
+</aside>
+
+<?php } else if ( is_active_sidebar( 'sidebar-general' ) ) { ?>
+
+<aside id="secondary-general" class="widget-area column is-one-quarter">
+	<?php dynamic_sidebar( 'sidebar-general' ); ?>
+</aside>
+
+<?php } ?>
+
