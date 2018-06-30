@@ -71,4 +71,4 @@
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content container">
-		<div class="columns is-gapless">
+		<div class="columns">

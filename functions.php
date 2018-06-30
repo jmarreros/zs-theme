@@ -81,6 +81,7 @@ if ( ! function_exists( 'zs_setup' ) ) :
 		) );
 	}
 endif;
+
 add_action( 'after_setup_theme', 'zs_setup' );
 
 /**
@@ -139,7 +140,18 @@ function zs_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 
+	//Sidebar content top home
+	register_sidebar( array(
+		'name'          => esc_html__( 'Content top home', 'zs' ),
+		'id'            => 'content-top-home',
+		'description'   => esc_html__( 'Add widgets here.', 'zs' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title"><span>',
+		'after_title'   => '</span></h2>',
+	) );
 
+	//Sidebar home
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar Home', 'zs' ),
 		'id'            => 'sidebar-home',
@@ -150,6 +162,7 @@ function zs_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 
+	//Sidebar all other pages
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar General', 'zs' ),
 		'id'            => 'sidebar-general',
@@ -159,6 +172,9 @@ function zs_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
+
+
 
 }
 add_action( 'widgets_init', 'zs_widgets_init' );

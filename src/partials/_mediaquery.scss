@@ -11,13 +11,21 @@
 
 @media( max-width:768px){
 
-    // .site-content .container{
-    //     max-width: 100%;
-    //     width:100%;
-    // }
+    //Aside
+    .home .site-content.container > .columns{
+        display:flex;
+        flex-direction: column-reverse;
+    }
 
     .site-content .column.is-one-quarter{
         width:100%;
+    }
+
+    #secondary-home {
+        margin-top:0;
+        .widget:first-child{
+            margin-top:0;
+        }
     }
 
     // Responsive menu

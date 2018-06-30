@@ -4,6 +4,7 @@
 --------------------------------------------------------------*/
 .site-content .widget {
 	padding:$padding-widget;
+	margin-top:12px;
 	// font-family: $font-content;
 	font-size:.9rem;
 
@@ -12,7 +13,7 @@
 		font-size:1.6rem;
 
 		margin: -$padding-widget;
-		margin-bottom: $padding-widget;
+		margin-bottom:0; //$padding-widget;
 		padding:8px $padding-widget;
 	}
 
@@ -29,15 +30,16 @@
 
 #secondary-home {
 
-	margin-top:-54px;
+	margin-top:-66px;
 
 	.widget:first-child{
-		background-color:$color-black-medium2;
+		background-color:$color-black-light2;
 		color:white;
 
 		.widget-title{
 			background-color: $color-black-light;
 			position: relative;
+			margin-bottom: $padding-widget;
 			&:after{
 				content:"";
 				display: block;
@@ -73,13 +75,63 @@
 			}
 		}
 
-
-		&:after{
-			content:"";
-			display: block;
-			clear:both;
-		}
+		@include clear;
 
 	}
 
+}
+
+
+// Extra
+
+//Google Map
+#custom_html-4{
+	margin-top:26px;
+	padding:4px;
+	.widget-title{
+		padding-left:24px;
+	}
+}
+
+#content-top-home{
+	margin-top:20px;
+	.vsel-widget{
+		padding:0;
+		border:1px solid grey;
+		display: flex;
+
+		.widget-title{
+			display: block;
+			background:$color-red-dark;
+			margin:0;
+			// margin-bottom: -$padding-widget;
+			// transform: rotate(-90deg);
+			// flex: 0 0 15px;
+			flex-basis: 30px;
+			min-width: 50px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			> span{
+				transform: rotate(-90deg);
+				white-space: nowrap;
+				color:white;
+			}
+		}
+		#vsel{
+			margin:0;
+			float:none;
+			padding:12px;
+			.vsel-content{
+				width:100%;
+				float:none;
+				margin:0;
+				padding:0;
+				clear:both;
+				> div{
+					float:none;
+				}
+			}
+		}
+	}
 }

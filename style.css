@@ -606,6 +606,9 @@ object {
     .header-text ul li {
       padding: 4px; }
 
+.site-content .column.is-one-quarter {
+  width: 28%; }
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -814,12 +817,13 @@ textarea {
 --------------------------------------------------------------*/
 .site-content .widget {
   padding: 16px;
+  margin-top: 12px;
   font-size: .9rem; }
   .site-content .widget .widget-title {
     font-family: "PT Sans Narrow", sans-serif;
     font-size: 1.6rem;
     margin: -16px;
-    margin-bottom: 16px;
+    margin-bottom: 0;
     padding: 8px 16px; }
   .site-content .widget h3 {
     font-family: "Montserrat", sans-serif;
@@ -829,13 +833,14 @@ textarea {
   max-width: 100%; }
 
 #secondary-home {
-  margin-top: -54px; }
+  margin-top: -66px; }
   #secondary-home .widget:first-child {
     background-color: #5F5F5F;
     color: white; }
     #secondary-home .widget:first-child .widget-title {
       background-color: #333333;
-      position: relative; }
+      position: relative;
+      margin-bottom: 16px; }
       #secondary-home .widget:first-child .widget-title:after {
         content: "";
         display: block;
@@ -866,6 +871,44 @@ textarea {
       display: block;
       clear: both; }
 
+#custom_html-4 {
+  margin-top: 26px;
+  padding: 4px; }
+  #custom_html-4 .widget-title {
+    padding-left: 24px; }
+
+#content-top-home {
+  margin-top: 20px; }
+  #content-top-home .vsel-widget {
+    padding: 0;
+    border: 1px solid grey;
+    display: flex; }
+    #content-top-home .vsel-widget .widget-title {
+      display: block;
+      background: #932121;
+      margin: 0;
+      flex-basis: 30px;
+      min-width: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      #content-top-home .vsel-widget .widget-title > span {
+        transform: rotate(-90deg);
+        white-space: nowrap;
+        color: white; }
+    #content-top-home .vsel-widget #vsel {
+      margin: 0;
+      float: none;
+      padding: 12px; }
+      #content-top-home .vsel-widget #vsel .vsel-content {
+        width: 100%;
+        float: none;
+        margin: 0;
+        padding: 0;
+        clear: both; }
+        #content-top-home .vsel-widget #vsel .vsel-content > div {
+          float: none; }
+
 @media (max-width: 1240px) {
   .site-content .column.is-one-quarter {
     width: 30%; }
@@ -874,8 +917,15 @@ textarea {
     width: 95%; } }
 
 @media (max-width: 768px) {
+  .home .site-content.container > .columns {
+    display: flex;
+    flex-direction: column-reverse; }
   .site-content .column.is-one-quarter {
     width: 100%; }
+  #secondary-home {
+    margin-top: 0; }
+    #secondary-home .widget:first-child {
+      margin-top: 0; }
   .site-header .container {
     background-position-y: 200px;
     background-position-x: center; }

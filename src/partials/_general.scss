@@ -35,7 +35,7 @@
         text-indent: -9999px;
         text-align: center;
         margin:auto;
-        
+
         a{
             background: url($logo);
             background-size: 250px 158px;
@@ -77,3 +77,12 @@
         }
     }
 }
+
+
+.site-content .column.is-one-quarter{
+    width:28%;
+}
+
+// #primary{
+//     padding:10px;
+// }

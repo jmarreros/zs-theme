@@ -18,6 +18,15 @@ get_header();
 	<div id="primary" class="content-area column">
 		<main id="main" class="site-main">
 
+
+		<?php if ( is_home() ): ?>
+			<aside id="content-top-home" class="widget-area">
+				<?php dynamic_sidebar( 'content-top-home' ); ?>
+			</aside>
+		<?php endif; ?>
+
+
+
 		<?php
 		if ( have_posts() ) :
 
