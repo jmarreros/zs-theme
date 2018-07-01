@@ -878,10 +878,15 @@ textarea {
     padding-left: 24px; }
 
 #content-top-home {
+  min-width: 480px;
   margin-top: 20px; }
+  #content-top-home a {
+    color: #C52B28;
+    transition: color .5s ease; }
+    #content-top-home a:hover {
+      color: #0F0705; }
   #content-top-home .vsel-widget {
     padding: 0;
-    border: 1px solid grey;
     display: flex; }
     #content-top-home .vsel-widget .widget-title {
       display: block;
@@ -899,24 +904,65 @@ textarea {
     #content-top-home .vsel-widget #vsel {
       margin: 0;
       float: none;
-      padding: 12px; }
+      padding: 8px;
+      padding-left: 32px; }
       #content-top-home .vsel-widget #vsel .vsel-content {
         width: 100%;
         float: none;
         margin: 0;
-        padding: 0;
-        clear: both; }
+        padding: 12px 10px;
+        clear: both;
+        display: flex;
+        align-items: center;
+        border: none;
+        border-bottom: 1px solid #D0D0D0; }
         #content-top-home .vsel-widget #vsel .vsel-content > div {
           float: none; }
+        #content-top-home .vsel-widget #vsel .vsel-content:first-child {
+          border-top: 1px solid #D0D0D0; }
+      #content-top-home .vsel-widget #vsel .vsel-image-info {
+        float: none;
+        width: 100%;
+        font-size: 1rem; }
+      #content-top-home .vsel-widget #vsel .vsel-image {
+        max-width: 20%;
+        margin-top: -28px;
+        text-align: center; }
+      #content-top-home .vsel-widget #vsel .vsel-meta {
+        margin-left: 20px; }
+        #content-top-home .vsel-widget #vsel .vsel-meta .vsel-meta-title {
+          font-family: "Montserrat", sans-serif;
+          font-size: 1.2rem; }
+      #content-top-home .vsel-widget #vsel .vsel-daynum > span {
+        display: block;
+        width: 72px;
+        color: white;
+        background: #C52B28;
+        text-align: center; }
+      #content-top-home .vsel-widget #vsel .vsel-daynum .vsel-day, #content-top-home .vsel-widget #vsel .vsel-daynum .vsel-year {
+        font-family: "PT Sans Narrow", sans-serif;
+        font-size: 1.2rem;
+        text-transform: capitalize; }
+      #content-top-home .vsel-widget #vsel .vsel-daynum .vsel-num {
+        font-size: 2.8rem;
+        line-height: 3rem;
+        font-family: Helvetica, sans-serif; }
+      #content-top-home .vsel-widget #vsel .vsel-daynum .vsel-year {
+        background-color: #0F0705;
+        color: #D0D0D0; }
 
 @media (max-width: 1240px) {
   .site-content .column.is-one-quarter {
     width: 30%; }
   .site-content .container {
     max-width: 95%;
-    width: 95%; } }
+    width: 95%; }
+  #content-top-home #vsel .vsel-image {
+    display: none; } }
 
 @media (max-width: 768px) {
+  #content-top-home .vsel-widget #vsel {
+    padding-left: 10px; }
   .home .site-content.container > .columns {
     display: flex;
     flex-direction: column-reverse; }

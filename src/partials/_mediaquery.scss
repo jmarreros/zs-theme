@@ -7,9 +7,18 @@
         max-width: 95%;
         width:95%;
     }
+
+    #content-top-home #vsel .vsel-image{
+        display: none;
+    }
 }
 
 @media( max-width:768px){
+
+    //Event widget
+    #content-top-home .vsel-widget #vsel{
+        padding-left: 10px;
+    }
 
     //Aside
     .home .site-content.container > .columns{

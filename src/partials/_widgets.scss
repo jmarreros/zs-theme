@@ -94,19 +94,26 @@
 }
 
 #content-top-home{
+
+	a{
+		color: $color-red-light; //$color-red-dark;
+		// font-weight: 400;
+		transition: color .5s ease;
+		&:hover{
+			color: $color-black-medium;
+		}
+	}
+
+	min-width: 480px;
 	margin-top:20px;
 	.vsel-widget{
 		padding:0;
-		border:1px solid grey;
 		display: flex;
 
 		.widget-title{
 			display: block;
 			background:$color-red-dark;
 			margin:0;
-			// margin-bottom: -$padding-widget;
-			// transform: rotate(-90deg);
-			// flex: 0 0 15px;
 			flex-basis: 30px;
 			min-width: 50px;
 			display: flex;
@@ -121,15 +128,71 @@
 		#vsel{
 			margin:0;
 			float:none;
-			padding:12px;
+			padding:8px;
+			padding-left:32px;
+
 			.vsel-content{
 				width:100%;
 				float:none;
 				margin:0;
-				padding:0;
+				padding:12px 10px;
 				clear:both;
+				display:flex;
+				align-items: center;
+				border:none;
+				border-bottom: 1px solid $color-black-light3;
 				> div{
 					float:none;
+				}
+
+				&:first-child{
+					border-top: 1px solid $color-black-light3;
+				}
+			}
+			.vsel-image-info{
+				float:none;
+				width:100%;
+				font-size: 1rem;
+			}
+
+			.vsel-image{
+				max-width: 20%;
+				margin-top: -28px;
+				text-align: center;
+			}
+
+			.vsel-meta{
+				margin-left:20px;
+				.vsel-meta-title{
+					font-family: $font-content;
+					font-size:1.2rem;
+				}
+			}
+
+			.vsel-daynum {
+
+				> span{
+					display:block;
+					width:72px;
+					color:white;
+					background:$color-red-light;
+					text-align: center;
+				}
+
+				.vsel-day, .vsel-year{
+					font-family: $font-title;
+					font-size:1.2rem;
+					text-transform: capitalize;
+				}
+
+				.vsel-num{
+					font-size: 2.8rem;
+					line-height: 3rem;
+					font-family: $font-base;
+				}
+				.vsel-year{
+					background-color:$color-black-medium;
+					color:$color-black-light3;
 				}
 			}
 		}

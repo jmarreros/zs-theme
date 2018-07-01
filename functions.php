@@ -240,6 +240,17 @@ function zs_item_search( $items, $args ) {
 }
 
 
+//Showin custom post type events
+
+add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
+
+function add_my_post_types_to_query( $query ) {
+	if ( ( is_single() || is_category() ) && $query->is_main_query() )
+		$query->set( 'post_type', array( 'post', 'event' ) );
+
+	return $query;
+}
+
 
 
 
