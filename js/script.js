@@ -48,10 +48,8 @@
     });
 
 
-    //Date event
-
-
-    $('.vsel-content').each( function(){
+    //Event widget
+    $('.widget .vsel-content').each( function( index ){
         var devent = $(this).find('.vsel-meta-single-date');
 
         if ( devent.length ){
@@ -71,9 +69,24 @@
 
         }
 
-
         $(this).find('.vsel-image-info').appendTo( $(this).find('.vsel-meta') );
 
+
+        var img_event = $(this).find('.vsel-image');
+
+        if ( img_event.length ){
+            var path = img_event.prop('src');
+            img_event.wrap( "<a href='" + path + "' data-lightbox='img-event-" + index + "'></a>" );
+        }
+
+    });
+
+    // Event widget click
+    $('.widget .vsel-content').on('click', function( e ){
+        if ( ! $(e.target).hasClass('vsel-image') ){
+            var link_event = $(this).find('.vsel-meta-title a').attr('href');
+            window.location.href = link_event;
+        }
     });
 
 

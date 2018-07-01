@@ -23,11 +23,12 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'zs' ); ?></a>
-
-	<header id="masthead" class="site-header">
+	<?php if ( ! is_front_page() || ! is_home() ) $class = 'header-min'; ?>
+	<header id="masthead" class="site-header <?= $class ?>">
 		<div class="container">
 
 			<div class="wrap columns">
+
 				<div class="site-branding column is-one-third">
 					<?php
 					the_custom_logo();
@@ -40,6 +41,7 @@
 						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 						<?php
 					endif;
+
 					$zs_description = get_bloginfo( 'description', 'display' );
 					if ( $zs_description || is_customize_preview() ) :
 						?>
@@ -55,19 +57,19 @@
 						'menu_id'        => 'primary-menu',
 					) );
 					?>
-
 				</nav><!-- #site-navigation -->
-			</div>
+
+			</div><!-- wrap columns -->
 
 			<?php if ( is_front_page() || is_search() ){ ?>
 				<aside class="header-text">
 					<div class="column is-one-third">
 					<?php dynamic_sidebar( 'header-text' ); ?>
 					</div>
-					</aside>
+				</aside>
 			<?php } ?>
 
-		</div>
+		</div><!-- container -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content container">

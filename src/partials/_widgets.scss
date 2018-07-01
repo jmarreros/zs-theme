@@ -95,14 +95,16 @@
 
 #content-top-home{
 
-	a{
-		color: $color-red-light; //$color-red-dark;
-		// font-weight: 400;
-		transition: color .5s ease;
-		&:hover{
-			color: $color-black-medium;
-		}
-	}
+	// a{
+	// 	// color: $color-red-light; //$color-red-dark;
+	// 	// font-weight: 400;
+	// 	color: $color-black-medium;
+
+	// 	transition: color .5s ease;
+	// 	&:hover{
+	// 		color: $color-black-medium;
+	// 	}
+	// }
 
 	min-width: 480px;
 	margin-top:20px;
@@ -148,6 +150,13 @@
 				&:first-child{
 					border-top: 1px solid $color-black-light3;
 				}
+
+				background-color: white;
+				transition: background-color .4s ease;
+				&:hover{
+					cursor: pointer;
+					background-color: #f4f4f4;
+				}
 			}
 			.vsel-image-info{
 				float:none;
@@ -165,6 +174,7 @@
 				margin-left:20px;
 				.vsel-meta-title{
 					font-family: $font-content;
+					font-weight: 500;
 					font-size:1.2rem;
 				}
 			}
