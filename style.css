@@ -460,14 +460,16 @@ table {
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-a {
+body a {
   color: black; }
 
 a:visited {
   color: black; }
 
-a:hover, a:focus, a:active {
-  color: #932121; }
+body a:hover,
+body a:focus,
+body a:active {
+  color: #C52B28; }
 
 a:focus {
   outline: thin dotted; }
@@ -637,11 +639,17 @@ body:not(.home) .site-content {
   body:not(.home) .site-content .column.is-one-quarter {
     width: 28%; }
 
+.page-title,
 .entry-title {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
   font-weight: 500;
   margin-bottom: 16px; }
+
+.page-title {
+  font-size: 1.8rem;
+  border-bottom: 1px solid #D0D0D0;
+  margin-bottom: 32px; }
 
 .post-thumbnail {
   text-align: center;
@@ -649,15 +657,20 @@ body:not(.home) .site-content {
   background-color: #F5F5F5;
   padding: 8px; }
 
+body.tax-event_cat .post-thumbnail img,
 body.single-event .post-thumbnail img {
   max-width: 600px; }
 
+body.tax-event_cat #vsel,
 body.single-event #vsel {
   margin-top: 20px; }
+  body.tax-event_cat #vsel .vsel-image-info,
+  body.tax-event_cat #vsel .vsel-meta,
   body.single-event #vsel .vsel-image-info,
   body.single-event #vsel .vsel-meta {
     width: 100%;
     float: none; }
+  body.tax-event_cat #vsel .vsel-meta .vsel-meta-date,
   body.single-event #vsel .vsel-meta .vsel-meta-date {
     background-color: #C52B28;
     padding: 10px;
@@ -665,18 +678,33 @@ body.single-event #vsel {
     font-size: 1.2rem;
     font-weight: bold;
     float: left; }
+    body.tax-event_cat #vsel .vsel-meta .vsel-meta-date span,
     body.single-event #vsel .vsel-meta .vsel-meta-date span {
       font-weight: normal; }
+  body.tax-event_cat #vsel .vsel-meta .vsel-meta-cats,
   body.single-event #vsel .vsel-meta .vsel-meta-cats {
     float: right; }
+  body.tax-event_cat #vsel .vsel-meta:after,
   body.single-event #vsel .vsel-meta:after {
     content: "";
     display: block;
     clear: both; }
+  body.tax-event_cat #vsel .vsel-image-info,
   body.single-event #vsel .vsel-image-info {
     padding: 10px;
     border: 1px solid #d0d0d0;
     background-color: #F5F5F5; }
+
+body.tax-event_cat article {
+  padding: 16px;
+  background-color: #F5F5F5;
+  margin-bottom: 48px; }
+  body.tax-event_cat article .vsel-image-info,
+  body.tax-event_cat article .post-thumbnail {
+    display: block;
+    border: none !important; }
+  body.tax-event_cat article .vsel-image {
+    display: none; }
 
 .site-footer {
   padding: 16px;
@@ -687,6 +715,8 @@ body.single-event #vsel {
     color: #C52B28; }
     .site-footer a:hover {
       color: white; }
+  .site-footer .site-info {
+    flex-direction: row-reverse; }
   .site-footer .footer-text img {
     float: left; }
   .site-footer .footer-text > div {
@@ -696,6 +726,35 @@ body.single-event #vsel {
     content: "";
     display: block;
     clear: both; }
+  .site-footer .footer-social {
+    text-align: center;
+    margin-top: 12px; }
+    .site-footer .footer-social li {
+      display: inline-block;
+      margin: 4px; }
+      .site-footer .footer-social li a {
+        width: 26px;
+        height: 26px;
+        text-align: center;
+        background: blue;
+        display: block;
+        border-radius: 3px;
+        color: white;
+        opacity: 0.75; }
+        .site-footer .footer-social li a i {
+          line-height: 26px; }
+        .site-footer .footer-social li a:hover {
+          opacity: 1; }
+    .site-footer .footer-social .rss {
+      background-color: #f67f00; }
+    .site-footer .footer-social .google-plus {
+      background-color: #d74d2f; }
+    .site-footer .footer-social .twitter {
+      background-color: #7ac9ed; }
+    .site-footer .footer-social .facebook {
+      background-color: #3b5998; }
+    .site-footer .footer-social .instagram {
+      background-color: #f33b9b; }
 
 /*--------------------------------------------------------------
 # Typography
@@ -1106,7 +1165,13 @@ textarea {
     background-color: rgba(0, 0, 0, 0.7);
     margin-top: 250px; }
     .header-text .widget {
-      width: 80%; } }
+      width: 80%; }
+  .site-footer .footer-text {
+    text-align: center; }
+    .site-footer .footer-text img {
+      float: none; }
+  text-align: center;
+  margin: auto; }
 
 @media (min-width: 660px) and (max-width: 767px) {
   .header-text {

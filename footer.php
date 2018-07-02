@@ -17,15 +17,17 @@
 		<div class="container">
 
 			<div class="site-info columns">
+
+				<div class="footer-social column is-one-quarter">
+						<?php dynamic_sidebar('footer-social') ?>
+				</div>
+
 				<div class="footer-text column">
 					<img width="43" height="67" src="<?php echo get_template_directory_uri() . '/images/logo-alterno.svg' ?>" />
 					<div>
 						<span>© Zona Salsera Copyright <?= date("Y") ?> | Todos los derechos reservados | </span>
 						<a hrer="#">Política de Privacidad</a>
 					</div>
-				</div>
-				<div class="footer-social column is-one-quarter">
-					<?php dynamic_sidebar('footer-social') ?>
 				</div>
 			</div>
 

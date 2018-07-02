@@ -517,7 +517,7 @@ table {
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-a {
+body a {
 	color: black;
 }
 
@@ -525,8 +525,10 @@ a:visited {
 	color: black;
 }
 
-a:hover, a:focus, a:active {
-	color: $color-red-dark;
+body a:hover,
+body a:focus,
+body a:active {
+	color: $color-red-light;
 }
 
 a:focus {
