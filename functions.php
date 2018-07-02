@@ -173,6 +173,16 @@ function zs_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 
+	// Social network footer
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer Social', 'zs' ),
+		'id'            => 'footer-social',
+		'description'   => esc_html__( 'Add widgets here.', 'zs' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 
 
 

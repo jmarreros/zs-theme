@@ -14,19 +14,22 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'zs' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'zs' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'zs' ), 'zs', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
+		<div class="container">
+
+			<div class="site-info columns">
+				<div class="footer-text column">
+					<img width="43" height="67" src="<?php echo get_template_directory_uri() . '/images/logo-alterno.svg' ?>" />
+					<div>
+						<span>© Zona Salsera Copyright <?= date("Y") ?> | Todos los derechos reservados | </span>
+						<a hrer="#">Política de Privacidad</a>
+					</div>
+				</div>
+				<div class="footer-social column is-one-quarter">
+					<?php dynamic_sidebar('footer-social') ?>
+				</div>
+			</div>
+
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

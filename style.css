@@ -577,12 +577,13 @@ object {
       padding-bottom: 0; }
     .site-header.header-min .container .site-title a {
       width: 100px;
-      height: 90px;
+      height: 82px;
       background-size: 100px 80px;
       background-repeat: no-repeat; }
     .site-header.header-min .container .site-description {
       margin: 0;
-      display: none; }
+      font-size: 0.6rem;
+      margin-bottom: 10px; }
     .site-header.header-min .container .main-navigation ul {
       margin-top: 20px; }
 
@@ -622,11 +623,79 @@ object {
     .header-text ul li {
       padding: 4px; }
 
-body:not(.home) .site-content.container {
-  margin-top: 40px; }
+body:not(.home) > .site {
+  background-color: #F5F5F5; }
 
-body:not(.home) .site-content .column.is-one-quarter {
-  width: 28%; }
+body:not(.home) .site-content {
+  background-color: white;
+  min-height: 600px; }
+  body:not(.home) .site-content.container {
+    margin-top: 0px;
+    border-right: 1px solid #ededed;
+    border-left: 1px solid #ededed;
+    padding: 16px; }
+  body:not(.home) .site-content .column.is-one-quarter {
+    width: 28%; }
+
+.entry-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 16px; }
+
+.post-thumbnail {
+  text-align: center;
+  border: 1px solid #d0d0d0;
+  background-color: #F5F5F5;
+  padding: 8px; }
+
+body.single-event .post-thumbnail img {
+  max-width: 600px; }
+
+body.single-event #vsel {
+  margin-top: 20px; }
+  body.single-event #vsel .vsel-image-info,
+  body.single-event #vsel .vsel-meta {
+    width: 100%;
+    float: none; }
+  body.single-event #vsel .vsel-meta .vsel-meta-date {
+    background-color: #C52B28;
+    padding: 10px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    float: left; }
+    body.single-event #vsel .vsel-meta .vsel-meta-date span {
+      font-weight: normal; }
+  body.single-event #vsel .vsel-meta .vsel-meta-cats {
+    float: right; }
+  body.single-event #vsel .vsel-meta:after {
+    content: "";
+    display: block;
+    clear: both; }
+  body.single-event #vsel .vsel-image-info {
+    padding: 10px;
+    border: 1px solid #d0d0d0;
+    background-color: #F5F5F5; }
+
+.site-footer {
+  padding: 16px;
+  background-color: #0F0705;
+  color: #D0D0D0;
+  min-height: 100px; }
+  .site-footer a {
+    color: #C52B28; }
+    .site-footer a:hover {
+      color: white; }
+  .site-footer .footer-text img {
+    float: left; }
+  .site-footer .footer-text > div {
+    display: inline-block;
+    padding: 22px 16px; }
+  .site-footer .footer-text:after {
+    content: "";
+    display: block;
+    clear: both; }
 
 /*--------------------------------------------------------------
 # Typography
@@ -837,7 +906,7 @@ textarea {
 .site-content .widget {
   padding: 16px;
   margin-top: 12px;
-  font-size: .9rem; }
+  font-size: 0.9rem; }
   .site-content .widget .widget-title {
     font-family: "PT Sans Narrow", sans-serif;
     font-size: 1.6rem;
@@ -931,7 +1000,7 @@ textarea {
         border: none;
         border-bottom: 1px solid #D0D0D0;
         background-color: white;
-        transition: background-color .4s ease; }
+        transition: background-color 0.4s ease; }
         #content-top-home .vsel-widget #vsel .vsel-content > div {
           float: none; }
         #content-top-home .vsel-widget #vsel .vsel-content:first-child {
@@ -959,7 +1028,8 @@ textarea {
         color: white;
         background: #C52B28;
         text-align: center; }
-      #content-top-home .vsel-widget #vsel .vsel-daynum .vsel-day, #content-top-home .vsel-widget #vsel .vsel-daynum .vsel-year {
+      #content-top-home .vsel-widget #vsel .vsel-daynum .vsel-day,
+      #content-top-home .vsel-widget #vsel .vsel-daynum .vsel-year {
         font-family: "PT Sans Narrow", sans-serif;
         font-size: 1.2rem;
         text-transform: capitalize; }
@@ -971,6 +1041,9 @@ textarea {
         background-color: #0F0705;
         color: #D0D0D0; }
 
+#secondary-general .widget {
+  background-color: #ebebeb; }
+
 @media (max-width: 1240px) {
   .site-content .column.is-one-quarter {
     width: 30%; }
@@ -981,6 +1054,8 @@ textarea {
     display: none; } }
 
 @media (max-width: 768px) {
+  body.single-event .post-thumbnail img {
+    max-width: 100%; }
   #content-top-home .vsel-widget #vsel {
     padding-left: 10px; }
   .home .site-content.container > .columns {
