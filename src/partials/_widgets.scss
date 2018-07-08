@@ -88,11 +88,27 @@
 }
 
 #content-top-home {
-  min-width: 480px;
   margin-top: 20px;
   .vsel-widget {
     padding: 0;
     display: flex;
+
+    //show only in responsive mode
+    .vsel-meta-single-date{
+      display: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: .8rem;
+      background:$color-red-light;
+      color:white;
+      padding:4px 8px;
+      &:before{
+        font-family: $font-awesome;
+        content:"\f073";
+        margin-right: 8px;
+      }
+    }
+
 
     .widget-title {
       display: block;

@@ -14,6 +14,27 @@
 }
 
 @media( max-width:768px){
+
+
+    #content-top-home .vsel-widget{
+        display:block;
+        .widget-title > span{
+            transform: none;
+        }
+        .vsel-meta-single-date{
+            display: inline-block;
+        }
+        .vsel-daynum{
+            display:none;
+        }
+        #vsel .vsel-meta{
+            margin:0;
+        }
+    }
+
+
+
+
     body.single-event .post-thumbnail img{
         max-width: 100%;
     }

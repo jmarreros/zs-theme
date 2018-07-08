@@ -54,7 +54,7 @@
 
         if ( devent.length ){
             var parts = devent.text().split(' ');
-            devent.remove();
+            //devent.remove();
 
             var devent = `
                             <div class="vsel-daynum">
