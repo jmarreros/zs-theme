@@ -5,7 +5,7 @@ Theme URI: http://zonasalsera.com/
 Author: Jhon Marreros Guzmán
 Author URI: https://decodecms.com/
 Description: Tema para Academia Zona Salsera Trujillo
-Version: 1.0.0
+Version: 1.5.1
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: zs
@@ -1109,6 +1109,40 @@ textarea {
       #content-top-home .vsel-widget #vsel .vsel-daynum .vsel-year {
         background-color: #0F0705;
         color: #D0D0D0; }
+  #content-top-home .widget_youtube-channel {
+    background-color: #2D2D2D; }
+    #content-top-home .widget_youtube-channel .ytc_link a {
+      border-radius: 2px;
+      color: white;
+      font-size: .75rem;
+      font-family: "Montserrat", sans-serif;
+      background-color: black;
+      padding: 4px 8px;
+      margin-top: 6px;
+      float: right; }
+      #content-top-home .widget_youtube-channel .ytc_link a:hover {
+        background-color: #C52B28; }
+      #content-top-home .widget_youtube-channel .ytc_link a:after {
+        content: "";
+        display: block;
+        clear: both; }
+    #content-top-home .widget_youtube-channel .widget-title {
+      color: white; }
+    #content-top-home .widget_youtube-channel .ytc_video_container {
+      width: 24% !important;
+      margin-left: .7%;
+      background-color: black;
+      padding: 4px; }
+      #content-top-home .widget_youtube-channel .ytc_video_container .ytc_thumb {
+        opacity: .75; }
+        #content-top-home .widget_youtube-channel .ytc_video_container .ytc_thumb > span::before {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background-position: -16px -4px;
+          margin-left: -26px; }
+      #content-top-home .widget_youtube-channel .ytc_video_container:hover .ytc_thumb {
+        opacity: 1; }
 
 #secondary-general .widget {
   background-color: #ebebeb; }
@@ -1123,6 +1157,9 @@ textarea {
     display: none; } }
 
 @media (max-width: 768px) {
+  #content-top-home .widget_youtube-channel .ytc_video_container {
+    width: 48% !important;
+    margin-top: 6px; }
   #content-top-home .vsel-widget {
     display: block; }
     #content-top-home .vsel-widget .widget-title > span {
@@ -1196,6 +1233,15 @@ textarea {
 @media (min-width: 660px) and (max-width: 767px) {
   .header-text {
     margin-top: 360px; } }
+
+@media (max-width: 480px) {
+  #content-top-home .widget_youtube-channel .ytc_video_container {
+    width: 80% !important;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    float: none;
+    margin-top: 10px; } }
 
 html.lb-disable-scrolling {
   overflow: hidden;

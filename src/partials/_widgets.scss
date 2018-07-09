@@ -89,6 +89,8 @@
 
 #content-top-home {
   margin-top: 20px;
+
+  //Widget event
   .vsel-widget {
     padding: 0;
     display: flex;
@@ -125,6 +127,7 @@
         color: white;
       }
     }
+
     #vsel {
       margin: 0;
       float: none;
@@ -204,7 +207,61 @@
         }
       }
     }
+
+  } //vsel widget
+
+  //Widget videos
+  .widget_youtube-channel{
+    background-color:$color-black-medium2;
+
+    .ytc_link a{
+      border-radius: 2px;
+      color:white;
+      font-size:.75rem;
+      font-family: $font-content;
+      background-color:black;
+      padding:4px 8px;
+      margin-top:6px;
+      float:right;
+
+      &:hover{
+        background-color:$color-red-light;
+      }
+
+      @include clear;
+    }
+
+    .widget-title{
+      color:white;
+    }
+
+    .ytc_video_container{
+      width:24%!important;
+      margin-left:.7%;
+      background-color:black;
+      padding:4px;
+
+      .ytc_thumb{
+        opacity: .75;
+        > span::before{
+          width:50px;
+          height:50px;
+          border-radius:50%;
+          background-position:-16px -4px;
+          margin-left:-26px;
+        }
+
+      }
+
+      &:hover{
+        .ytc_thumb{
+          opacity:1;
+        }
+      }
+
+    }
   }
+
 } // Secondary home
 
 

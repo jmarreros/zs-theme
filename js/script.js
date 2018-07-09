@@ -90,6 +90,8 @@
     });
 
 
+    //Add target
+    $('.widget_youtube-channel .ytc-lightbox').attr('target','_blank');
 
 
 })( jQuery );
