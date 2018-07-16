@@ -221,7 +221,7 @@
       font-family: $font-content;
       background-color:black;
       padding:4px 8px;
-      margin-top:6px;
+      margin-top:12px;
       float:right;
 
       &:hover{
@@ -250,12 +250,30 @@
           background-position:-16px -4px;
           margin-left:-26px;
         }
+      }
 
+      .ytc_title{
+        display: table;
+        height: 52px;
+        margin: auto;
+        a{
+          color:$color-medium-white2;
+          text-align: center;
+          display: table-cell;
+          vertical-align: middle;
+        }
+
+
+        // min-height: 52px;
+        // padding:4px;
       }
 
       &:hover{
         .ytc_thumb{
           opacity:1;
+        }
+        .ytc_title a{
+          color:white;
         }
       }
 

@@ -1118,7 +1118,7 @@ textarea {
       font-family: "Montserrat", sans-serif;
       background-color: black;
       padding: 4px 8px;
-      margin-top: 6px;
+      margin-top: 12px;
       float: right; }
       #content-top-home .widget_youtube-channel .ytc_link a:hover {
         background-color: #C52B28; }
@@ -1141,8 +1141,19 @@ textarea {
           border-radius: 50%;
           background-position: -16px -4px;
           margin-left: -26px; }
+      #content-top-home .widget_youtube-channel .ytc_video_container .ytc_title {
+        display: table;
+        height: 52px;
+        margin: auto; }
+        #content-top-home .widget_youtube-channel .ytc_video_container .ytc_title a {
+          color: #d0d0d0;
+          text-align: center;
+          display: table-cell;
+          vertical-align: middle; }
       #content-top-home .widget_youtube-channel .ytc_video_container:hover .ytc_thumb {
         opacity: 1; }
+      #content-top-home .widget_youtube-channel .ytc_video_container:hover .ytc_title a {
+        color: white; }
 
 #secondary-general .widget {
   background-color: #ebebeb; }
