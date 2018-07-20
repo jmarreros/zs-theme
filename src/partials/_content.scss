@@ -1,0 +1,42 @@
+
+//Gallery
+.gallery .gallery-item{
+    padding:0 3px;
+}
+
+
+.single{
+
+    font-size: 1.1rem;
+
+    .entry-title{
+        margin:1.6rem auto;
+        font-weight: bold;
+    }
+
+    .entry-meta{
+        width: 100%;
+        background-color:$color-medium-white;
+        border:1px solid $color-medium-white2;
+        padding:10px;
+
+        .byline{
+            float: right;
+        }
+
+        .author{
+            text-transform: capitalize;
+        }
+    }
+
+
+    .post-thumbnail{
+        margin:1.5em auto;
+    }
+
+    article{
+        p{
+            margin-bottom: 1.5em;
+        }
+    }
+}

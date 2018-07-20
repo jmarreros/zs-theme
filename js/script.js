@@ -94,4 +94,16 @@
     $('.widget_youtube-channel .ytc-lightbox').attr('target','_blank');
 
 
+
+    //gallery in content
+    $('.gallery .gallery-item a').each( function(index){
+
+        // get img name
+        var name_img = $(this).attr('href');
+        name_img = name_img.substring(name_img.lastIndexOf('/') + 1, name_img.lastIndexOf('.'));
+
+        $(this).attr('data-lightbox', 'galeria');
+    });
+    //data-lightbox="img-event-0"
+
 })( jQuery );
