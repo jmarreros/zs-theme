@@ -761,24 +761,29 @@ body.tax-event_cat article {
 a.post-thumbnail {
   display: block; }
 
+.pagination-blog {
+  margin: 20px 10px; }
+
 .page-numbers {
-  display: table;
-  margin: 20px auto; }
+  display: flex;
+  justify-content: flex-end; }
   .page-numbers li {
-    display: table-cell;
-    width: 24px;
-    height: 24px;
-    border: 1px solid #5F5F5F;
+    display: block;
+    margin-right: 3px;
+    border: 1px solid #AEADAD;
     text-align: center;
     line-height: 20px; }
     .page-numbers li span {
+      display: block;
+      width: 24px;
+      height: 24px;
       text-align: center; }
       .page-numbers li span.current {
-        color: #5F5F5F; }
+        color: #AEADAD; }
     .page-numbers li a {
       color: #5F5F5F;
-      display: block;
       text-align: center;
+      display: block;
       width: 24px;
       height: 24px; }
       .page-numbers li a:hover {
@@ -842,6 +847,30 @@ a.post-thumbnail {
       display: inline-block; }
       .list-articles article .more-link:hover {
         background-color: #C52B28; }
+
+.search article {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border: 1px dotted gray;
+  padding: 32px;
+  background-color: #FFF9DA; }
+
+.search .entry-meta {
+  margin-bottom: 3px;
+  padding: 10px; }
+
+.search .post-thumbnail {
+  background: transparent;
+  border: none; }
+
+.category article {
+  padding: 20px;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px dotted gray; }
+
+.category .entry-meta {
+  padding: 18px 10px 12px; }
 
 .single {
   font-size: 1.1rem; }

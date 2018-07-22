@@ -61,7 +61,7 @@
 
 			</div><!-- wrap columns -->
 
-			<?php if ( is_front_page() || is_search() ){ ?>
+			<?php if ( is_front_page() ){ ?>
 				<aside class="header-text">
 					<div class="column is-one-third">
 					<?php dynamic_sidebar( 'header-text' ); ?>

@@ -35,7 +35,7 @@
 		the_content( sprintf(
 			wp_kses(
 				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'zs' ),
+				__( 'Leer más... <span class="screen-reader-text"> "%s"</span>', 'zs' ),
 				array(
 					'span' => array(
 						'class' => array(),
@@ -50,9 +50,6 @@
 			'after'  => '</div>',
 		) );
 		?>
-	</div><!-- .entry-content -->
+	</div>
 
-	<footer class="entry-footer">
-		<?php zs_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+</article>
