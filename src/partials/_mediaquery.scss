@@ -15,6 +15,13 @@
 
 @media( max-width:768px){
 
+    //content home
+    .list-articles{
+        article{
+            width:50%!important;
+        }
+    }
+
     #content-top-home {
 
         //videos
@@ -165,6 +172,13 @@
 
 
 @media( max-width:480px){
+
+    .list-articles{
+        article{
+            width:100%!important;
+        }
+    }
+
     #content-top-home {
         //videos
         .widget_youtube-channel{

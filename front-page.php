@@ -15,12 +15,22 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area column">
+	<div id="primary" class="content-area column blog">
 		<main id="main" class="site-main">
+
+		<?php if ( is_home() ): ?>
+			<aside id="content-top-home" class="widget-area">
+				<?php dynamic_sidebar( 'content-top-home' ); ?>
+			</aside>
+		<?php endif; ?>
+
+		<h2 class="title-blog"><span><?php _e('Publicaciones Recientes','zs'); ?></span></h2>
+
 
 		<?php
 		if ( have_posts() ) :
 
+			echo "<div class='list-articles'>";
 			if ( is_home() && ! is_front_page() ) :
 				?>
 				<header>
@@ -38,12 +48,13 @@ get_header();
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+				get_template_part( 'template-parts/content', 'home' );
 
 			endwhile;
 
-			//the_posts_navigation();
+			echo "</div>"; //list articles
 
+			//the_posts_navigation();
 			include_once 'inc/pagination.php';
 
 		else :

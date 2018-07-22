@@ -7,6 +7,19 @@
  * @package zs
  */
 
+if ( ! function_exists( 'meta_entry_data' ) ) :
+	// Prints date an autor meta data
+	function meta_entry_data(){
+		if ( 'post' === get_post_type() ):
+			echo "<div class='entry-meta'>";
+				zs_posted_on();
+				zs_posted_by();
+			echo "</div>";
+		endif;
+	}
+endif;
+
+
 if ( ! function_exists( 'zs_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time.

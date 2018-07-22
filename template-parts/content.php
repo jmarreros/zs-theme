@@ -10,26 +10,25 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+
 		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
+		if ( is_singular() ): ?>
+			<header class="entry-header">
 				<?php
-				zs_posted_on();
-				zs_posted_by();
+					the_title( '<h1 class="entry-title">', '</h1>' );
+					meta_entry_data();
 				?>
-			</div><!-- .entry-meta -->
+			</header>
 		<?php endif; ?>
-	</header><!-- .entry-header -->
+	<?php
+		zs_post_thumbnail();
 
-	<?php zs_post_thumbnail(); ?>
+		if ( ! is_singular() ){
+			meta_entry_data();
+			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+		}
+
+	?>
 
 	<div class="entry-content">
 		<?php

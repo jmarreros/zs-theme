@@ -4,6 +4,124 @@
     padding:0 3px;
 }
 
+a.post-thumbnail{
+    display: block;
+}
+
+
+.page-numbers{
+    display: table;
+    margin: 20px auto;
+    li{
+        display: table-cell;
+        width:24px;
+        height: 24px;
+        border:1px solid $color-black-light2;
+        text-align: center;
+        line-height: 20px;
+        span{
+            text-align: center;
+            &.current{
+                color: $color-black-light2;
+            }
+        }
+        a{
+            color:$color-black-light2;
+            display: block;
+            text-align: center;
+            width: 24px;
+            height: 24px;
+            &:hover{
+                background-color:$color-red-light;
+                color:white;
+            }
+
+        }
+    }
+}
+
+
+.home{
+    .title-blog{
+        font-family: $font-content;
+        font-size: 1.8rem;
+        color: $color-black-medium3;
+        margin:3rem auto 2.5rem;
+        text-align: center;
+        border-bottom: 1px solid gray;
+        line-height: 0.1em;
+        span{
+            background:white;
+            padding:10px;
+        }
+    }
+}
+
+
+//index and archive
+.list-articles{
+    display: flex;
+    flex-wrap: wrap;
+    article{
+        width:33.3%;
+        padding:5px;
+
+        .post-thumbnail{
+            padding:0;
+            border:none;
+            background:none;
+            img{
+                width:100%;
+            }
+        }
+
+        .entry-title{
+            font-size:1.1rem;
+            line-height: 1.4rem;
+            padding:18px 10px;
+            font-weight: 500;
+            margin:0;
+            min-height: 80px;
+        }
+
+        .entry-meta{
+            font-family: $font-content;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border-bottom: 1px solid $color-black-light3;
+            padding:8px 10px;
+
+            .byline{
+                float: right;
+            }
+            @include clear;
+        }
+
+        .entry-content{
+            padding:10px;
+            padding-top:0;
+        }
+
+        > div{
+            background-color:$color-medium-white;
+            border: 1px solid $color-black-light3;
+        }
+
+        .more-link{
+            background-color:$color-black-medium;
+            color:white;
+            padding:2px 8px;
+            border-radius: 3px;
+            display: inline-block;
+
+            &:hover{
+                background-color:$color-red-light;
+            }
+        }
+    }
+}
+
+
 
 .single{
 
