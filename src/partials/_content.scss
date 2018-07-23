@@ -6,6 +6,7 @@
 
 a.post-thumbnail{
     display: block;
+    line-height: 0;
 }
 
 .pagination-blog{
@@ -155,7 +156,13 @@ a.post-thumbnail{
         border-bottom: 1px dotted gray;
     }
     .entry-meta{
-        padding:18px 10px 12px;
+        padding:18px 0 12px;
+        .byline{
+            float:right;
+        }
+    }
+    .entry-content{
+        margin-top:20px;
     }
 }
 
@@ -187,6 +194,7 @@ a.post-thumbnail{
 
     .post-thumbnail{
         margin:1.5em auto;
+        line-height: 0;
     }
 
     article{

@@ -120,7 +120,7 @@ if ( ! function_exists( 'zs_post_thumbnail' ) ) :
 	 * Wraps the post thumbnail in an anchor element on index views, or a div
 	 * element when on single views.
 	 */
-	function zs_post_thumbnail() {
+	function zs_post_thumbnail( $thumbnail_size = 'thumbnail') {
 		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 			return;
 		}
@@ -136,7 +136,7 @@ if ( ! function_exists( 'zs_post_thumbnail' ) ) :
 
 		<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 			<?php
-			the_post_thumbnail( 'thumbnail', array(
+			the_post_thumbnail( $thumbnail_size, array(
 				'alt' => the_title_attribute( array(
 					'echo' => false,
 				) ),
